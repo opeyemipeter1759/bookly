@@ -22,11 +22,13 @@ function Navbar() {
   const navAuthData = [
     {
       title: 'Login',
-      path: RouteLinks.login,
+          path: RouteLinks.login,
+      className:"btn-trans"
     },
     {
       title: 'Register',
-      path: RouteLinks.signup,
+        path: RouteLinks.signup,
+      className:"btn-green"
     },
   ];
   return (
@@ -58,9 +60,10 @@ function Navbar() {
               );
             })}
           </ul>
+
           <div className='d-flex'>
             {navAuthData.map((item, index) => {
-              return <CustomLink label={item.title} to={item.path} />;
+                return <CustomLink key={index} label={item.title} to={item.path} className={ item.className} />;
             })}
           </div>
         </div>

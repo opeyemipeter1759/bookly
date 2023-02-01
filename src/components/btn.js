@@ -8,7 +8,6 @@ export const CustomBtn=({label, style, className=""})=> {
 }
 export const CustomLink = ({label, to, className=""})=> {
     return (
-
-        <Link to={to} className={` btn ${className}`}>{label}</Link>
+        <Link to={to} className={`btn ${className}`}>{label}</Link>
     )
   }

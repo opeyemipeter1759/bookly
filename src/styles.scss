@@ -1,2 +1,20 @@
-@import "./assets/styles/base.scss"
+@import "./assets/styles/base.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// component
+
+@import "./assets/styles/components/btn.scss";
+@import "./assets/styles/components/navbar.scss";
+
+
+
+@font-face {
+    font-family: "CamptonBold";
+    src: url(./assets/fonts/Campton-BoldDEMO.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: "CamptonLight";
+    src: url(./assets/fonts/Campton-LightDEMO.ttf) format("ttf")
+}
 
