@@ -1,13 +1,40 @@
 import React from 'react';
-import { CustomBtn } from './btn'
+import { CustomLink } from './btn';
+import { RouteLinks } from '../routes/route-links';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const navdata = [
+    {
+      title: 'About',
+      path: RouteLinks.about,
+    },
+    {
+      title: 'Dashboard',
+      path: RouteLinks.home,
+    },
+    {
+      title: 'Contact',
+      path: RouteLinks.contact,
+    },
+  ];
+
+  const navAuthData = [
+    {
+      title: 'Login',
+      path: RouteLinks.login,
+    },
+    {
+      title: 'Register',
+      path: RouteLinks.signup,
+    },
+  ];
   return (
     <nav className='navbar navbar-expand-lg container'>
       <div className='container-fluid'>
-        <a className='navbar-brand' href='*'>
-          <img src='/images/navIcon.svg' alt="nav-icon"/>
-        </a>
+        <Link to={RouteLinks.home}>
+          <img src='/images/navIcon.svg' alt='nav-icon' />
+        </Link>
         <button
           className='navbar-toggler'
           type='button'
@@ -21,28 +48,20 @@ function Navbar() {
         </button>
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav me-auto ms-auto mb-2 mb-lg-0'>
-            <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='*'>
-              About
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a className='nav-link' href='*'>
-              Dashboard
-              </a>
-            </li>
-      
-            <li className='nav-item'>
-              <a className='nav-link' href='*'>Contact</a>
-            </li>
+            {navdata.map((item, index) => {
+              return (
+                <li className='nav-item' key={index}>
+                  <Link to={item.path} className='nav-link' key={index}>
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
-          <div className='d-flex' >
-                      <CustomBtn label='Login' style={{
-                          border:'1px solid red'
-                      }} />
-                          <CustomBtn label='Sign Up' style={{
-                          border:'1px solid blue'
-                      }}/>
+          <div className='d-flex'>
+            {navAuthData.map((item, index) => {
+              return <CustomLink label={item.title} to={item.path} />;
+            })}
           </div>
         </div>
       </div>

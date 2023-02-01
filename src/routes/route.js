@@ -14,7 +14,7 @@ export const PublicRoute = [
     },
     {
         component: <Contact/>,
-        path: RouteLinks.home,
+        path: RouteLinks.contact,
         exact: true,
     },
     {
