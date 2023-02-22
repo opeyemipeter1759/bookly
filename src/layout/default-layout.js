@@ -3,10 +3,10 @@ import Navbar from '../components/navbar'
 
 function PageLayout({children}) {
   return (
-      <>
+      <div>
           <Navbar/>
           {children}
-      </>
+      </div>
   )
 }
 

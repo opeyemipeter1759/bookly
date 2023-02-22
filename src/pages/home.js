@@ -3,11 +3,12 @@ import { CustomLink } from '../components/btn'
 import PageLayout from '../layout/default-layout'
 
 
- const HeroSession = ({heroText, paragraph,}) => {
+ const HeroSession = ({heroText, paragraph,img}) => {
   return (
-      <div>
+      <div className='d-flex'>
+          <div className='hero-session-l'>
           <h1>
-              {heroText} <span>easy</span> {heroText}
+            Learning made <span>easy</span> and <span>fun</span>.
           </h1> 
           <p>
               {paragraph}
@@ -17,6 +18,8 @@ import PageLayout from '../layout/default-layout'
               to="/register"
               className='btn-green'
           />
+          </div>
+          <img src='/images/hero-page-image.svg' alt='hero--page-img' className='hero-session-img mt-5'/>
     </div>
   )
 }
@@ -25,13 +28,13 @@ import PageLayout from '../layout/default-layout'
 function Home() {
   return (
       <PageLayout>
-          <div className='container mt-5' >    
+          <div className='container mt-5 ' >    
           <HeroSession
               heroText="Learning made easy and fun."
               paragraph="Learn at your pace and with ease without pressure
               and connect to tutors who will help achieve your 
               educational goals"
-          />
+              />       
           </div>
     </PageLayout>
   )

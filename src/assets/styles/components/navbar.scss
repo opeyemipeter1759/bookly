@@ -1,10 +1,10 @@
 .navbar{
-    font-family: CamptonLight;
+    font-family: $font-family-poppins;
     margin-top: 2.1rem;
     &-collapse{
             .navbar-nav{
                 .nav-item{
-                    font-family: 'CamptonLight';
+                    font-family: '$font-family-poppins';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 20px;

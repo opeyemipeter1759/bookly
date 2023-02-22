@@ -28,7 +28,7 @@ function Navbar() {
     {
       title: 'Register',
         path: RouteLinks.signup,
-      className:"btn-green"
+      className:"btn-green ms-4"
     },
   ];
   return (
