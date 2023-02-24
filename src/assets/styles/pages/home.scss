@@ -5,16 +5,18 @@
   align-items: baseline;
   justify-content: center;
   h1 {
+    font-size: 40px;
     font-family: $font-family-poppins;
-    font-style: normal;
     font-weight: 700;
-    font-size: 68px;
-    line-height: 74px;
+    @include media-breakpoint-up(md){
+        font-size: 68px;   
+        line-height: 74px;
+    }
     span {
-        color:#04D9D9;
+      color: #04d9d9;
     }
   }
-  p{
+  p {
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
@@ -24,5 +26,6 @@
     margin-bottom: 2rem;
   }
 }
-.hero-session-img {
+.users-reading{
+    
 }
