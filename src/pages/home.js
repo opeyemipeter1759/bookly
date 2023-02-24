@@ -25,7 +25,7 @@ const HeroSession = ({ paragraph, img }) => {
 const CourseSession = ( { img, title, bodyText} ) =>
 {
     return (
-        <div className='col-md-4 course-session-item'>
+        <div className='col-md-4 col-sm-12 course-session-item'>
             <img src={img} alt="course" className='img-fluid'/>
             <h2>{title}</h2>
             <p>{bodyText}</p>
@@ -60,7 +60,7 @@ function Home() {
                           courseList.map( ( list, index ) =>
                           {
                               return (
-                                  <CourseSession
+                                  <CourseSession key={index}
                                       img={list.img}
                                       title={list.title}
                                       bodyText={list.bodyText}
@@ -68,6 +68,9 @@ function Home() {
                               )
                           })
                       }
+                  </div>
+                  <div className="d-flex justify-content-center show-more">
+                    <CustomLink label='View more courses  ' to='/' className='btn-green ' />
                   </div>
               </div>
       </div>
