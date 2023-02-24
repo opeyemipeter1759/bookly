@@ -1,6 +1,7 @@
 import React from 'react';
 import { CustomLink } from '../components/btn';
 import PageLayout from '../layout/default-layout';
+import { courseList } from '../assets/styles/pages/home-data';
 
 const HeroSession = ({ paragraph, img }) => {
   return (
@@ -21,6 +22,17 @@ const HeroSession = ({ paragraph, img }) => {
   );
 };
 
+const CourseSession = ( { img, title, bodyText} ) =>
+{
+    return (
+        <div className='col-md-4 course-session-item'>
+            <img src={img} alt="course" className='img-fluid'/>
+            <h2>{title}</h2>
+            <p>{bodyText}</p>
+        </div>
+    )
+}
+
 function Home() {
   return (
     <PageLayout>
@@ -31,7 +43,6 @@ function Home() {
               and connect to tutors who will help achieve your 
               educational goals'
               />
-              
               <div className='users-reading'>
               <h1>
                   2K+
@@ -39,8 +50,26 @@ function Home() {
               <p>
                   Registered Tutors
               </p>
+              </div>    
+
+              {/* course session */}
+              <div className='course-session'>
+                  <h1 className='text-center'>Courses to Learn</h1>
+                  <div className='row'>
+                      {
+                          courseList.map( ( list, index ) =>
+                          {
+                              return (
+                                  <CourseSession
+                                      img={list.img}
+                                      title={list.title}
+                                      bodyText={list.bodyText}
+                                  />
+                              )
+                          })
+                      }
+                  </div>
               </div>
-          
       </div>
     </PageLayout>
   );

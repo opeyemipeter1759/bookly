@@ -8,9 +8,9 @@
     font-size: 40px;
     font-family: $font-family-poppins;
     font-weight: 700;
-    @include media-breakpoint-up(md){
-        font-size: 68px;   
-        line-height: 74px;
+    @include media-breakpoint-up(md) {
+      font-size: 68px;
+      line-height: 74px;
     }
     span {
       color: #04d9d9;
@@ -26,27 +26,55 @@
     margin-bottom: 2rem;
   }
 }
-.users-reading{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-    h1{
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 74px;
-        color: #000000;
+.users-reading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    color: #000000;
     font-family: $font-family-poppins;
-
-    }
-    p{
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 28px;
-        color: #000000;
+  }
+  p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
     font-family: $font-family-poppins;
     margin-top: 18px;
+  }
+}
 
+.course-session {
+  margin-top: 120px;
+  .text-center {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 65px;
+    color: #000000;
+    margin-bottom: 88px;
+    font-family: $font-family-poppins;
+  }
+  &-item {
+    h2 {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+      color: #000000;
+      font-family: $font-family-poppins;
+      margin-top: 24px;
+      margin-bottom: 1rem;
     }
+    p {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      font-family: $font-family-poppins;
+    }
+  }
 }
